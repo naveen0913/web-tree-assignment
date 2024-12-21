@@ -6,7 +6,7 @@ function App() {
   return (
     <div className="App">
      < Header/>
-     <div style={{ padding: "16px" }}>
+     <div className='card-container'>
       <UserCard />
     </div>
     </div>

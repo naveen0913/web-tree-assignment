@@ -2,13 +2,10 @@ import React from "react";
 import { useFetchUserData } from "../../hooks/userFetchApi";
 import { CgSpinner } from "react-icons/cg";
 import "../UserCard/userCardStyles.css";
+import * as Constants from "../../constants/constants";
 
 function UserCard() {
-  const {
-    data: userData,
-    loading,
-    error,
-  } = useFetchUserData("https://randomuser.me/api/?page=1&results=1&seed=abc");
+  const { data: userData, loading, error } = useFetchUserData(Constants.baseUrl);
 
   if (loading)
     return (
@@ -39,7 +36,7 @@ function UserCard() {
             Last Name :<span className="span-text"> {userData.name.last}</span>
           </div>
         </div>
-        
+
         <p className="paragraph-text">
           Gender : <span className="span-text"> {userData.gender}</span>
         </p>
