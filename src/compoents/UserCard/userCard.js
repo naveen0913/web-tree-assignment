@@ -17,7 +17,6 @@ function UserCard() {
 
   return (
     <div className="user-card">
-      {/* User Picture */}
       <div className="user-picture">
         <img
           src={userData.picture.large}
@@ -25,7 +24,6 @@ function UserCard() {
         />
       </div>
 
-      {/* User Details */}
       <div className="user-details">
         <div className="names-container">
           <div className="paragraph-text">
