@@ -11,7 +11,6 @@ export const useFetchUserData = (url) => {
         setLoading(true);
         const response = await fetch(url);
         const result = await response.json();
-        console.log(`res:`, result);
         setData(result.results[0]);
       } catch (err) {
         setError("Failed to fetch data.");
